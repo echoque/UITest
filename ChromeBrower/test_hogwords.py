@@ -31,7 +31,10 @@ class Hogwarts(unittest.TestCase):
         headless_option.headless=True
         self.driver = webdriver.Chrome(options=headless_option)
         self.driver.get("https://testing-studio.com/")
-        # print(self.driver.page_source,encoding='utf-8')
+        print(self.driver.page_source,encoding='utf-8')
+        self.driver.find_elements()
+
+
 
     def test_mulWindows(self):
         driver=self.driver
