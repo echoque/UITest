@@ -39,17 +39,17 @@ class Hogwarts(unittest.TestCase):
     def test_mulWindows(self):
         driver=self.driver
         driver.get("https://testerhome.com/")
-        ####无法通过css_selector定位到测试工程师生存指南++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        ##无法通过css_selector定位到测试工程师生存指南++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         # elements=driver.find_elements_by_css_selector('a[title=测试工程师生存指南]')
         # print(elements)
-        # print(type(elements))
 
         # driver.find_element(By.CSS_SELECTOR,"title=测试工程师生存指南").click()
         driver.find_element(By.PARTIAL_LINK_TEXT,"测试工程师生存指南").click()
         time.sleep(5)
         assert driver.find_element(By.CSS_SELECTOR,"#前言")
-        print(driver.page_source)
-        #执行完报错
+        page=driver.page_source
+        print(page)
+        #执行完报错File-Setting-File Encoding 设置成utf-8
 
 
         ##不支持getElementById+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
