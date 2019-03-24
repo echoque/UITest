@@ -53,9 +53,9 @@ class Hogwarts(unittest.TestCase):
 
 
         ##不支持getElementById+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        # js_lookfor="var q =document.getElementById('前言)"
-        # driver.execute_script(js_lookfor).click()
-        # driver.save_screenshot("./js_lookfor.jpg")
+        js_lookfor="var q =document.getElementById('前言)"
+        driver.execute_script(js_lookfor).click()
+        driver.save_screenshot("./js_lookfor.jpg")
         # handles=driver.window_handles
         # print(handles)
         # driver.switch_to.window(handles[1])
